@@ -23,8 +23,8 @@ class PHPMail extends Model
         $this->mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
         $this->mail->Port = 587;                                    // TCP port to connect to
 
-        $this->mail->setFrom('contato@juliotorresfotografia.com.br', 'Site Julio Torres');
-        $this->mail->addAddress('contato@juliotorresfotografia.com.br', 'Site Julio Torres');     // Add a recipient
+        $this->mail->setFrom('sampletest', 'Site Julio Torres');
+        $this->mail->addAddress('sampletest', 'Site Julio Torres');     // Add a recipient
 
 
         $this->mail->isHTML(true);                                  // Set email format to HTML
