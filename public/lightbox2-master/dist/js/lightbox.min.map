@@ -1,0 +1,118 @@
+{"version":3,"file":"lightbox.min.js","sources":["../../src/js/lightbox.js"],"names":["root","factory","define","amd","exports","module","require","lightbox","jQuery","this","$","Lightbox","options","album","currentImageIndex","init","extend","constructor","defaults","option","albumLabel","alwaysShowNavOnTouchDevices","fadeDuration","fitImagesInViewport","positionFromTop","resizeDuration","showImageNumberLabel","wrapAround","prototype","imageCountLabel","currentImageNum","totalImages","replace","enable","build","self","on","event","start","currentTarget","appendTo","$lightbox","$overlay","$outerContainer","find","$container","containerTopPadding","parseInt","css","containerRightPadding","containerBottomPadding","containerLeftPadding","hide","end","target","attr","changeImage","length","$link","addToAlbum","push","link","title","$window","window","proxy","sizeOverlay","visibility","$links","imageNumber","dataLightboxValue","prop","i","j","top","scrollTop","left","scrollLeft","fadeIn","disableKeyboardNav","$image","addClass","preloader","Image","onload","$preloader","imageHeight","imageWidth","maxImageHeight","maxImageWidth","windowHeight","windowWidth","width","height","maxWidth","maxHeight","sizeContainer","src","document","postResize","newWidth","newHeight","showImage","oldWidth","outerWidth","oldHeight","outerHeight","animate","stop","updateNav","updateDetails","preloadNeighboringImages","enableKeyboardNav","alwaysShowNav","createEvent","e","show","html","undefined","open","location","href","labelText","text","removeClass","preloadNext","preloadPrev","keyboardAction","off","KEYCODE_ESC","KEYCODE_LEFTARROW","KEYCODE_RIGHTARROW","keycode","keyCode","key","String","fromCharCode","toLowerCase","match","fadeOut"],"mappings":"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<?php
+
+/*
+ * This file is part of the Monolog package.
+ *
+ * (c) Jordi Boggiano <j.boggiano@seld.be>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Monolog\Handler;
+
+use Monolog\Logger;
+use Monolog\TestCase;
+
+class FilterHandlerTest extends TestCase
+{
+    /**
+     * @covers Monolog\Handler\FilterHandler::isHandling
+     */
+    public function testIsHandling()
+    {
+        $test    = new TestHandler();
+        $handler = new FilterHandler($test, Logger::INFO, Logger::NOTICE);
+        $this->assertFalse($handler->isHandling($this->getRecord(Logger::DEBUG)));
+        $this->assertTrue($handler->isHandling($this->getRecord(Logger::INFO)));
+        $this->assertTrue($handler->isHandling($this->getRecord(Logger::NOTICE)));
+        $this->assertFalse($handler->isHandling($this->getRecord(Logger::WARNING)));
+        $this->assertFalse($handler->isHandling($this->getRecord(Logger::ERROR)));
+        $this->assertFalse($handler->isHandling($this->getRecord(Logger::CRITICAL)));
+        $this->assertFalse($handler->isHandling($this->getRecord(Logger::ALERT)));
+        $this->assertFalse($handler->isHandling($this->getRecord(Logger::EMERGENCY)));
+    }
+
+    /**
+     * @covers Monolog\Handler\FilterHandler::handle
+     * @covers Monolog\Handler\FilterHandler::setAcceptedLevels
+     * @covers Monolog\Handler\FilterHandler::isHandling
+     */
+    public function testHandleProcessOnlyNeededLevels()
+    {
+        $test    = new TestHandler();
+        $handler = new FilterHandler($test, Logger::INFO, Logger::NOTICE);
+
+        $handler->handle($this->getRecord(Logger::DEBUG));
+        $this->assertFalse($test->hasDebugRecords());
+
+        $handler->handle($this->getRecord(Logger::INFO));
+        $this->assertTrue($test->hasInfoRecords());
+        $handler->handle($this->getRecord(Logger::NOTICE));
+        $this->assertTrue($test->hasNoticeRecords());
+
+        $handler->handle($this->getRecord(Logger::WARNING));
+        $this->assertFalse($test->hasWarningRecords());
+        $handler->handle($this->getRecord(Logger::ERROR));
+        $this->assertFalse($test->hasErrorRecords());
+        $handler->handle($this->getRecord(Logger::CRITICAL));
+        $this->assertFalse($test->hasCriticalRecords());
+        $handler->handle($this->getRecord(Logger::ALERT));
+        $this->assertFalse($test->hasAlertRecords());
+        $handler->handle($this->getRecord(Logger::EMERGENCY));
+        $this->assertFalse($test->hasEmergencyRecords());
+
+        $test    = new TestHandler();
+        $handler = new FilterHandler($test, array(Logger::INFO, Logger::ERROR));
+
+        $handler->handle($this->getRecord(Logger::DEBUG));
+        $this->assertFalse($test->hasDebugRecords());
+        $handler->handle($this->getRecord(Logger::INFO));
+        $this->assertTrue($test->hasInfoRecords());
+        $handler->handle($this->getRecord(Logger::NOTICE));
+        $this->assertFalse($test->hasNoticeRecords());
+        $handler->handle($this->getRecord(Logger::ERROR));
+        $this->assertTrue($test->hasErrorRecords());
+        $handler->handle($this->getRecord(Logger::CRITICAL));
+        $this->assertFalse($test->hasCriticalRecords());
+    }
+
+    /**
+     * @covers Monolog\Handler\FilterHandler::setAcceptedLevels
+     * @covers Monolog\Handler\FilterHandler::getAcceptedLevels
+     */
+    public function testAcceptedLevelApi()
+    {
+        $test    = new TestHandler();
+        $handler = new FilterHandler($test);
+
+        $levels = array(Logger::INFO, Logger::ERROR);
+        $handler->setAcceptedLevels($levels);
+        $this->assertSame($levels, $handler->getAcceptedLevels());
+
+        $handler->setAcceptedLevels(array('info', 'error'));
+        $this->assertSame($levels, $handler->getAcceptedLevels());
+
+        $levels = array(Logger::CRITICAL, Logger::ALERT, Logger::EMERGENCY);
+        $handler->setAcceptedLevels(Logger::CRITICAL, Logger::EMERGENCY);
+        $this->assertSame($levels, $handler->getAcceptedLevels());
+
+        $handler->setAcceptedLevels('critical', 'emergency');
+        $this->assertSame($levels, $handler->getAcceptedLevels());
+    }
+
+    /**
+     * @covers Monolog\Handler\FilterHandler::handle
+     */
+    public function testHandleUsesProcessors()
+    {
+        $test    = new TestHandler();
+        $handler = new FilterHandler($test, Logger::DEBUG, Logger::EMERGENCY);
+        $handler->pushProcessor(
+            function ($record) {
+                $record['extra']['foo'] = true;
+
+                return $record;
+            }
+        );
+        $handler->handle($this->
