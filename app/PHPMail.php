@@ -16,10 +16,10 @@ class PHPMail extends Model
     public function sendMail()
     {
         $this->mail->isSMTP();                                      // Set mailer to use SMTP
-        $this->mail->Host = 'smtp.juliotorresfotografia.com.br';  // Specify main and backup SMTP servers
+        $this->mail->Host = 'sampletest';  // Specify main and backup SMTP servers
         $this->mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $this->mail->Username = 'contato@juliotorresfotografia.com.br';                 // SMTP username
-        $this->mail->Password = 'macarrao@2016';                           // SMTP password
+        $this->mail->Username = 'sampletest';                 // SMTP username
+        $this->mail->Password = 'sampletest';                           // SMTP password
         $this->mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
         $this->mail->Port = 587;                                    // TCP port to connect to
 
